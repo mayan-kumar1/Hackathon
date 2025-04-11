@@ -78,16 +78,16 @@
     <!-- CTA Buttons -->
     <section class="text-center my-6">
       <button
-        onclick="loginPatient()"
+        onclick="registerPatient()"
         class="bg-blue-600 text-white font-semibold px-6 py-2 rounded hover:bg-blue-700 m-2 shadow"
       >
-        Login as Patient
+        Register as Patient
       </button>
       <button
-        onclick="loginDoctor()"
+        onclick="registerDoctor()"
         class="bg-blue-600 text-white font-semibold px-6 py-2 rounded hover:bg-blue-700 m-2 shadow"
       >
-        Login as Doctor
+        Register as Doctor
       </button>
       <button
         onclick="window.location.href='emergency.html'"
@@ -188,8 +188,8 @@
         window.location.href = "/login";
       }
 
-      function loginDoctor() {
-        window.location.href = "/login";
+      function registerDoctor() {
+        window.location.href = "/registerDoctor";
       }
 
       function emergencyHelp() {
@@ -197,10 +197,10 @@
       }
 
       function registerPatient() {
-        window.location.href = "/registerPatient";
+        window.location.href = "/patientRegistration";
       }
       function registerDoctor() {
-        window.location.href = "/registerDoctor";
+        window.location.href = "/doctorRegistration";
       }
       function toggleMenu() {
         const menu = document.getElementById("mobileMenu");
