@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-4">
+      <div class="text-center mb-8">
+        <h1 class="text-3xl font-semibold">Patient Dashboard</h1>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h2 class="text-xl font-semibold mb-4">Upcoming Appointments</h2>
+        <p>You have no upcoming appointments.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+          onclick="bookAppointment()"
+        >
+          <h3 class="text-lg font-semibold mb-2">Book New Appointment</h3>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+          onclick="viewReports()"
+        >
+          <h3 class="text-lg font-semibold mb-2">View Old Reports</h3>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+          onclick="aiSummary()"
+        >
+          <h3 class="text-lg font-semibold mb-2">AI Summary</h3>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+          onclick="learnMentalHealth()"
+        >
+          <h3 class="text-lg font-semibold mb-2">Learn Mental Health</h3>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+          onclick="learnGeneralHealth()"
+        >
+          <h3 class="text-lg font-semibold mb-2">Learn General Health</h3>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function bookAppointment() {
+        alert("Redirecting to book appointment page...");
+        // Implement navigation logic here
+      }
+
+      function viewReports() {
+        alert("Redirecting to view reports page...");
+        // Implement navigation logic here
+      }
+
+      function aiSummary() {
+        alert("Redirecting to AI summary page...");
+        // Implement navigation logic here
+      }
+
+      function learnMentalHealth() {
+        alert("Redirecting to mental health learning page...");
+        // Implement navigation logic here
+      }
+
+      function learnGeneralHealth() {
+        alert("Redirecting to general health learning page...");
+        // Implement navigation logic here
+      }
+    </script>
+  </body>
+</html>
