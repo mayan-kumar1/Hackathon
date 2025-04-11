@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patient Registration</title>
-  </head>
-  <body>
-    <h2>Patient Registration</h2>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Patient Enrollment Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body style="background-color: #69D1C5;" class="py-10">
+  <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+    
+    <!-- Top Section with Image Left -->
+    <div class="flex items-center gap-6 p-6 bg-gradient-to-r from-blue-600 to-teal-400 text-white">
+      <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-lg">
+        <img src="medical.65d592a94c9a25.07563121 (1).png" alt="Doctor" class="w-full h-full object-cover">
+      </div>
+      <h1 class="text-3xl font-bold">New Patient Enrollment Form</h1>
+    </div>
+
+    <!-- Form Content -->
+    <div class="p-8">
+      <form>
+        <h2 class="text-xl font-semibold mb-4">Personal Information</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-medium">Full Name *</label>
+            <input type="text" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
+          </div>
+          <div>
+            <label class="block font-medium">Date of Birth *</label>
+            <input type="date" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
+          </div>
+          <div>
+            <label class="block font-medium">Sex *</label>
+            <select required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+              <option value="">Select</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-medium">Height (in inches) *</label>
+            <input type="number" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
+          </div>
+          <div>
+            <label class="block font-medium">Weight (in pounds) *</label>
+            <input type="number" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
+          </div>
+          <div>
+            <label class="block font-medium">Marital Status *</label>
+            <select required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+              <option value="">Select</option>
+              <option>Single</option>
+              <option>Married</option>
+              <option>Divorced</option>
+              <option>Widowed</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-medium">Contact Number *</label>
+            <input type="tel" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
+          </div>
+          <div>
+            <label class="block font-medium">Email Address *</label>
+            <input type="email" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
+          </div>
+          <div class="md:col-span-2">
+            <label class="block font-medium">Residential Address *</label>
+            <textarea required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"></textarea>
+          </div>
+        </div>
+
+        <h2 class="text-xl font-semibold mt-8 mb-4">Emergency Contact Information</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-medium">Emergency Contact Name *</label>
+            <input type="text" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
+          </div>
+          <div>
+            <label class="block font-medium">Relationship to Patient *</label>
+            <input type="text" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
+          </div>
+          <div class="md:col-span-2">
+            <label class="block font-medium">Emergency Contact Number *</label>
+            <input type="tel" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
 </html>
