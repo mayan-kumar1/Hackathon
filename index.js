@@ -26,6 +26,9 @@ app.get("/doctorDashboard", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "doctorDashboard.html")); // Corrected path
 });
 
+app.get("/login", (req, res) => {
+  res.sendFile(path.join(__dirname, "static", "login.html")); // Corrected path
+});
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
