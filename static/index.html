@@ -1,11 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <h2>Home PAge</h2>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthConnect - Your Health, Connected</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-blue-50 text-gray-800 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-blue-600 sticky top-0 z-50 shadow-md">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <a href="#" class="text-white text-2xl font-bold">HealthConnect</a>
+        <ul class="hidden md:flex space-x-6 text-white font-medium">
+          <li><a href="#intro" class="hover:text-blue-100">Home</a></li>
+          <li><a href="#features" class="hover:text-blue-100">Features</a></li>
+          <li><a href="#about" class="hover:text-blue-100">About Us</a></li>
+          <li>
+            <a href="#testimonials" class="hover:text-blue-100">Testimonials</a>
+          </li>
+          <li>
+            <a href="#" onclick="loginPatient()" class="hover:text-blue-100"
+              >Login</a
+            >
+          </li>
+
+          <li>
+            <a href="#" onclick="emergencyHelp()" class="hover:text-blue-100"
+              >Emergency Help</a
+            >
+          </li>
+        </ul>
+        <button onclick="toggleMenu()" class="text-white md:hidden text-2xl">
+          &#9776;
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <ul
+        id="mobileMenu"
+        class="md:hidden hidden flex-col space-y-2 px-6 pb-4 text-white font-medium bg-blue-600"
+      >
+        <li><a href="#intro" class="hover:text-blue-100">Home</a></li>
+        <li><a href="#features" class="hover:text-blue-100">Features</a></li>
+        <li><a href="#about" class="hover:text-blue-100">About Us</a></li>
+        <li>
+          <a href="#testimonials" class="hover:text-blue-100">Testimonials</a>
+        </li>
+        <li>
+          <a href="#" onclick="registerPatient()" class="hover:text-blue-100"
+            >Register as Patient</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="registerDoctor()" class="hover:text-blue-100"
+            >Register as Doctor</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="emergencyHelp()" class="hover:text-blue-100"
+            >Emergency Help</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="max-w-4xl mx-auto p-8">
+      <h2 class="text-3xl font-semibold mb-4">Welcome to HealthConnect</h2>
+      <p class="text-lg">
+        Our mission is to streamline healthcare access with secure digital
+        records, easy consultations, and reliable emergency services. We bring
+        health solutions to your fingertips.
+      </p>
+    </section>
+
+    <!-- CTA Buttons -->
+    <section class="text-center my-6">
+      <button
+        onclick="loginPatient()"
+        class="bg-blue-600 text-white font-semibold px-6 py-2 rounded hover:bg-blue-700 m-2 shadow"
+      >
+        Login as Patient
+      </button>
+      <button
+        onclick="loginDoctor()"
+        class="bg-blue-600 text-white font-semibold px-6 py-2 rounded hover:bg-blue-700 m-2 shadow"
+      >
+        Login as Doctor
+      </button>
+      <button
+        onclick="window.location.href='emergency.html'"
+        class="bg-red-600 text-white font-semibold px-6 py-2 rounded hover:bg-red-700 m-2 shadow"
+      >
+        Emergency Help
+      </button>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="max-w-4xl mx-auto p-8">
+      <h2 class="text-2xl font-semibold mb-4">Key Features</h2>
+      <ul class="list-none space-y-2 text-lg">
+        <li>📁 Secure Digital Records</li>
+        <li>💬 Online Consultations</li>
+        <li>🚑 Emergency Assistance</li>
+        <li>📊 Health Analytics</li>
+      </ul>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="max-w-4xl mx-auto p-8">
+      <h2 class="text-2xl font-semibold mb-4">About Us</h2>
+      <ul class="list-none space-y-2 text-lg">
+        <li>🌍 Mission and Vision</li>
+        <li>👥 Team Information</li>
+        <li>🤝 Partnerships and Collaborations</li>
+        <li>📞 Contact Information</li>
+      </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="max-w-6xl mx-auto p-8">
+      <h2 class="text-2xl font-semibold mb-6">What Our Users Say</h2>
+      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="bg-blue-100 p-4 border-l-4 border-blue-600 rounded shadow flex flex-col justify-between h-56"
+        >
+          <p>
+            "Thanks to HealthConnect, I was able to get help in minutes during
+            an emergency!"
+          </p>
+          <strong class="mt-4">– Ayesha K., Patient</strong>
+        </div>
+        <div
+          class="bg-blue-100 p-4 border-l-4 border-blue-600 rounded shadow flex flex-col justify-between h-56"
+        >
+          <p>"Managing patient records has never been easier."</p>
+          <strong class="mt-4">– Dr. Arjun R., Cardiologist</strong>
+        </div>
+        <div
+          class="bg-blue-100 p-4 border-l-4 border-blue-600 rounded shadow flex flex-col justify-between h-56"
+        >
+          <p>
+            "The online consultation feature saved me a long trip to the
+            hospital."
+          </p>
+          <strong class="mt-4">– Ravi S., Patient</strong>
+        </div>
+        <div
+          class="bg-blue-100 p-4 border-l-4 border-blue-600 rounded shadow flex flex-col justify-between h-56"
+        >
+          <p>
+            "I can track prescriptions and communicate with my patients from
+            anywhere."
+          </p>
+          <strong class="mt-4">– Dr. Meera N., General Physician</strong>
+        </div>
+        <div
+          class="bg-blue-100 p-4 border-l-4 border-blue-600 rounded shadow flex flex-col justify-between h-56"
+        >
+          <p>
+            "HealthConnect gives me peace of mind knowing help is just a click
+            away."
+          </p>
+          <strong class="mt-4">– Kiran M., Caregiver</strong>
+        </div>
+        <div
+          class="bg-blue-100 p-4 border-l-4 border-blue-600 rounded shadow flex flex-col justify-between h-56"
+        >
+          <p>
+            "Easy, fast, and secure. I recommend this platform to all my
+            patients."
+          </p>
+          <strong class="mt-4">– Dr. Faizan A., Dermatologist</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center py-6 mt-8">
+      <p>&copy; 2025 HealthConnect. All rights reserved.</p>
+    </footer>
+
+    <!-- JS Section -->
+    <script>
+      function loginPatient() {
+        window.location.href = "/login";
+      }
+
+      function loginDoctor() {
+        window.location.href = "/login";
+      }
+
+      function emergencyHelp() {
+        window.location.href = "emergency.html";
+      }
+
+      function registerPatient() {
+        window.location.href = "/registerPatient";
+      }
+      function registerDoctor() {
+        window.location.href = "/registerDoctor";
+      }
+      function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+  </body>
 </html>
