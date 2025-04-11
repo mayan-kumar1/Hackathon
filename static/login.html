@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthCare - Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 h-screen w-screen flex items-center justify-center" style="background-color: #0A1D56;">
+  <div class="backdrop-blur-md bg-white/20 border border-white/30 rounded-xl shadow-2xl p-6 w-[280px] text-center">
+
+    <!-- Title -->
+    <div class="text-white text-xl font-bold mb-4">HealthCare</div>
+
+    <!-- Heading -->
+    <h2 class="text-white text-lg mb-4">Login</h2>
+
+    <!-- Form -->
+    <form action="/login" method="POST" class="space-y-3 text-left">
+
+      <!-- Username -->
+      <div>
+        <label for="username" class="block text-white font-bold mb-1 text-sm">Username</label>
+        <input type="text" id="username" name="username" required
+               class="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-400" />
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="password" class="block text-white font-bold mb-1 text-sm">Password</label>
+        <input type="password" id="password" name="password" required
+               class="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-400" />
+
+        <!-- Show Password -->
+        <div class="flex items-center text-white text-xs mt-2">
+          <input type="checkbox" id="showPassword" onclick="togglePassword()" class="mr-2" />
+          <label for="showPassword">Show Password</label>
+        </div>
+
+        <!-- Forgot Password -->
+        <div class="text-right text-white text-xs mt-2">
+          <a href="#" class="underline hover:text-green-200">Forgot Password?</a>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit"
+              class="w-full mt-3 bg-green-500 text-white py-2 rounded hover:bg-green-600 transition-colors text-sm font-medium">
+        Login
+      </button>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const pwd = document.getElementById("password");
+      pwd.type = pwd.type === "password" ? "text" : "password";
+    }
+  </script>
+</body>
+</html>
+
